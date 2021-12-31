@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JHashimoto.AwsViewer.Console", "JHashimoto.AwsViewer.Console\JHashimoto.AwsViewer.Console.csproj", "{CFC8C604-C4F1-4299-BC45-AAD4D3CA7563}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JHashimoto.AwsViewer.AwsInfrastructure", "JHashimoto.AwsViewer.AwsInfrastructure\JHashimoto.AwsViewer.AwsInfrastructure.csproj", "{6FB39610-FE0B-4927-BE1D-FF9AB016E724}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JHashimoto.AwsViewer.Export.Excel", "JHashimoto.AwsViewer.Export.Excel\JHashimoto.AwsViewer.Export.Excel.csproj", "{98CA2034-B28A-421E-B78E-1EAE4735F6A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JHashimoto.AwsViewer.Domain", "JHashimoto.AwsViewer.Domain\JHashimoto.AwsViewer.Domain.csproj", "{54997D58-6E49-49D3-8926-5A1FDF3F899F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFC8C604-C4F1-4299-BC45-AAD4D3CA7563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFC8C604-C4F1-4299-BC45-AAD4D3CA7563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFC8C604-C4F1-4299-BC45-AAD4D3CA7563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFC8C604-C4F1-4299-BC45-AAD4D3CA7563}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FB39610-FE0B-4927-BE1D-FF9AB016E724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB39610-FE0B-4927-BE1D-FF9AB016E724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB39610-FE0B-4927-BE1D-FF9AB016E724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB39610-FE0B-4927-BE1D-FF9AB016E724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98CA2034-B28A-421E-B78E-1EAE4735F6A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98CA2034-B28A-421E-B78E-1EAE4735F6A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98CA2034-B28A-421E-B78E-1EAE4735F6A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98CA2034-B28A-421E-B78E-1EAE4735F6A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54997D58-6E49-49D3-8926-5A1FDF3F899F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54997D58-6E49-49D3-8926-5A1FDF3F899F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54997D58-6E49-49D3-8926-5A1FDF3F899F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54997D58-6E49-49D3-8926-5A1FDF3F899F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38DCEAF6-5F82-4B99-B713-8B42B44AAEE3}
+	EndGlobalSection
+EndGlobal
