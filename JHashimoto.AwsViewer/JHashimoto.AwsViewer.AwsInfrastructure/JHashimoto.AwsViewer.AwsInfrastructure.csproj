@@ -10,4 +10,12 @@
     <PackageReference Include="AWSSDK.EC2" Version="3.7.50.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\JHashimoto.AwsViewer.Domain\JHashimoto.AwsViewer.CreateDefinitionsApplication.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="QueryService\" />
+  </ItemGroup>
+
 </Project>

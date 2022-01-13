@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JHashimoto.AwsViewer.AwsInfrastructure\JHashimoto.AwsViewer.AwsInfrastructure.csproj" />
+    <ProjectReference Include="..\JHashimoto.AwsViewer.Domain\JHashimoto.AwsViewer.CreateDefinitionsApplication.csproj" />
   </ItemGroup>
 
 </Project>

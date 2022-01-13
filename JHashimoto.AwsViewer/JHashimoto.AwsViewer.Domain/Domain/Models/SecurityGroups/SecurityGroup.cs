@@ -5,6 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace JHashimoto.AwsViewer.Domain.Models.SecurityGroups {
-    internal class SecurityGroup {
+    public class SecurityGroup {
     }
 }
