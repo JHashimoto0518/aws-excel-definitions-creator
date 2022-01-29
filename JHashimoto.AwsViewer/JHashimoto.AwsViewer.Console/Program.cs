@@ -28,6 +28,6 @@ public static class EntryPoint {
 
 
         // See https://aka.ms/new-console-template for more information
-        Console.WriteLine(instanceList[0].Id);
+        Console.WriteLine($"id={instanceList[0].ID}, Name={instanceList[0].Name}");
     }
 }

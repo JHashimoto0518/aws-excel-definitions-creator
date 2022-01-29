@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace JHashimoto.AwsViewer.CreateDefinitionsApplication.Domain.Models.EC2 {
     public class EC2Instance {
-        public string Id { get; set; }
+        public string ID { get; set; }
+        public string Name { get; set; }
     }
 }

@@ -28,10 +28,15 @@ namespace JHashimoto.AwsViewer.AwsInfrastructure.EC2 {
         public List<EC2Instance> GetAll() {
             var request = new DescribeInstancesRequest();
             var response = ec2Client.DescribeInstancesAsync(request);
+            var reservations = response.Result.Reservations;
             
             return new List<EC2Instance>() {
                 new EC2Instance() {
-                    Id = response.Result.Reservations.First().Instances.First().InstanceId,
+                    ID = reservations.First().Instances.First().InstanceId,
+                    Name = (
+                    from tag in reservations.First().Instances.First().Tags
+                    where tag.Key == "Name"
+                    select tag.Value).FirstOrDefault() ?? "タグなし",
                 }
             };
         }
