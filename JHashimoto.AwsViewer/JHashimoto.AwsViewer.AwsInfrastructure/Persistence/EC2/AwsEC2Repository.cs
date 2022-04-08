@@ -8,7 +8,7 @@ using Amazon.EC2.Model;
 using JHashimoto.AwsViewer.CreateDefinitionsApplication.Domain.Models.EC2;
 using JHashimoto.AwsViewer.AwsInfrastructure.Authentication;
 
-namespace JHashimoto.AwsViewer.AwsInfrastructure.EC2 {
+namespace JHashimoto.AwsViewer.AwsInfrastructure.Persistence.EC2 {
     /// <summary>
     /// 
     /// </summary>
@@ -29,14 +29,19 @@ namespace JHashimoto.AwsViewer.AwsInfrastructure.EC2 {
             var request = new DescribeInstancesRequest();
             var response = ec2Client.DescribeInstancesAsync(request);
             var reservations = response.Result.Reservations;
-            
+
+            var instance = reservations.First().Instances.First();
             return new List<EC2Instance>() {
                 new EC2Instance() {
-                    ID = reservations.First().Instances.First().InstanceId,
+                    ID = instance.InstanceId,
+                    
                     Name = (
-                    from tag in reservations.First().Instances.First().Tags
-                    where tag.Key == "Name"
-                    select tag.Value).FirstOrDefault() ?? "タグなし",
+                        from tag in instance.Tags
+                        where tag.Key == "Name"
+                        select tag.Value).FirstOrDefault() ?? "タグなし",
+
+                    InstanceType = instance.InstanceType,
+                    ImageID = instance.ImageId
                 }
             };
         }
