@@ -23,7 +23,10 @@ public static class EntryPoint {
         // Inner Exception
         //AmazonServiceException: Unable to get IAM security credentials from EC2 Instance Metadata Service.
         //var ec2Repository = new AwsEC2Repository();
-        var ec2Repository = new AwsEC2Repository("dev", Amazon.RegionEndpoint.APNortheast1);
+        
+        //var ec2Repository = new AwsEC2Repository("dev", Amazon.RegionEndpoint.APNortheast1);
+        var ec2Repository = new InMemoryAwsEC2Repository(); // for test
+
         var exportRepository = new ExcelEC2Repository();
 
         var ec2Service = new EC2ApplicationService(ec2Repository, exportRepository);

@@ -15,6 +15,7 @@
     <ProjectReference Include="..\JHashimoto.AwsViewer.AwsInfrastructure\JHashimoto.AwsViewer.AwsInfrastructure.csproj" />
     <ProjectReference Include="..\JHashimoto.AwsViewer.Domain\JHashimoto.AwsViewer.CreateDefinitionsApplication.csproj" />
     <ProjectReference Include="..\JHashimoto.AwsViewer.Export.Excel\JHashimoto.AwsViewer.ExcelInfrastructure.csproj" />
+    <ProjectReference Include="..\JHashimoto.AwsViewer.InMemoryAwsInfrastructure\JHashimoto.AwsViewer.InMemoryAwsInfrastructure.csproj" />
   </ItemGroup>
 
 </Project>
