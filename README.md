@@ -2,7 +2,7 @@
 This is a tool that generates an Excel workbook noting AWS resource attributes.
 
 # EC2
-![image](https://user-images.githubusercontent.com/46337314/162559067-bc93e65c-fd28-4476-a96d-8021987d19da.png)
+![image](https://user-images.githubusercontent.com/46337314/162560323-2cd3b071-7180-42cb-81e7-fa5b82f3bfe7.png)
 
 # Usage
 comming soon
