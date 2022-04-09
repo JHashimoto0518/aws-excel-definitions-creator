@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 
 namespace JHashimoto.AwsViewer.CreateDefinitionsApplication.Domain.Services {
     public interface IExportRepository {
-        void Export(List<EC2Instance> ec2List);
+        void Export(IEnumerable<EC2Instance> ec2List);
     }
 }

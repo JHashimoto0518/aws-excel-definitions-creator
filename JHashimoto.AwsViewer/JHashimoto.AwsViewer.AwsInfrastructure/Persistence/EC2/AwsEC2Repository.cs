@@ -25,25 +25,45 @@ namespace JHashimoto.AwsViewer.AwsInfrastructure.Persistence.EC2 {
             ec2Client = new AmazonEC2Client();
         }
 
-        public List<EC2Instance> GetAll() {
+        public IEnumerable<EC2Instance> GetAll() {
             var request = new DescribeInstancesRequest();
             var response = ec2Client.DescribeInstancesAsync(request);
             var reservations = response.Result.Reservations;
 
-            var instance = reservations.First().Instances.First();
-            return new List<EC2Instance>() {
-                new EC2Instance() {
-                    ID = instance.InstanceId,
-                    
-                    Name = (
-                        from tag in instance.Tags
-                        where tag.Key == "Name"
-                        select tag.Value).FirstOrDefault() ?? "タグなし",
+            foreach (var reserve in reservations) {
+                foreach (var ins in reserve.Instances) {
+                    var sg = new {
+                        GroupID = ins.SecurityGroups.FirstOrDefault()?.GroupId ?? "none",
+                        GroupName = ins.SecurityGroups.FirstOrDefault()?.GroupName ?? "none"
+                    };
 
-                    InstanceType = instance.InstanceType,
-                    ImageID = instance.ImageId
+                    yield return
+                        new EC2Instance() {
+                            ID = ins.InstanceId,
+
+                            Name = (
+                                from tag in ins.Tags
+                                where tag.Key == "Name"
+                                select tag.Value).FirstOrDefault() ?? "タグなし",
+
+                            InstanceType = ins.InstanceType,
+                            ImageID = ins.ImageId,
+                            PrivateDns = ins.PrivateDnsName,
+                            PrivateIP = ins.PrivateIpAddress,
+                            PublicIP = ins.PublicIpAddress,
+                            // TODO:all securitygroup
+                            SecurityGroupID = sg.GroupID,
+                            SecurityGroupName = sg.GroupName,
+                            VpcID = ins.VpcId,
+                            SubnetID = ins.SubnetId,
+                            AZ = ins.Placement.AvailabilityZone,
+                            RootDeviceName = ins.RootDeviceName,
+                            Key = ins.KeyName,
+                            Platform = ins.Platform,
+                            Architecture = ins.Architecture
+                        };
                 }
-            };
+            }
         }
 
 
