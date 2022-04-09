@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JHashimoto.AwsViewer.ExcelI
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JHashimoto.AwsViewer.CreateDefinitionsApplication", "JHashimoto.AwsViewer.Domain\JHashimoto.AwsViewer.CreateDefinitionsApplication.csproj", "{54997D58-6E49-49D3-8926-5A1FDF3F899F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JHashimoto.AwsViewer.InMemoryAwsInfrastructure", "JHashimoto.AwsViewer.InMemoryAwsInfrastructure\JHashimoto.AwsViewer.InMemoryAwsInfrastructure.csproj", "{5806F61E-741C-4247-8A41-93AEFD2EC394}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{54997D58-6E49-49D3-8926-5A1FDF3F899F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54997D58-6E49-49D3-8926-5A1FDF3F899F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54997D58-6E49-49D3-8926-5A1FDF3F899F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5806F61E-741C-4247-8A41-93AEFD2EC394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5806F61E-741C-4247-8A41-93AEFD2EC394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5806F61E-741C-4247-8A41-93AEFD2EC394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5806F61E-741C-4247-8A41-93AEFD2EC394}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
