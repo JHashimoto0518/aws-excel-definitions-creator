@@ -21,10 +21,6 @@ namespace JHashimoto.AwsViewer.CreateDefinitionsApplication.Application.EC2 {
         }
 
 
-        public List<EC2Instance> GetAll() {
-            return ec2Repository.GetAll();
-        }
-
         public void Export() {
             this.exportRepository.Export(this.ec2Repository.GetAll());
         }
