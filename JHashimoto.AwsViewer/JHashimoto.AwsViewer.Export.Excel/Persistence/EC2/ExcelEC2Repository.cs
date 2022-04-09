@@ -15,7 +15,7 @@ namespace JHashimoto.AwsViewer.ExcelInfrastructure.Persistence.EC2 {
                 Data = ec2List
             };
 
-            using(var workbook = new XLWorkbook(@".\Templates\aws_resources_template_1.2.xlsx")){
+            using(var workbook = new XLWorkbook(@".\Templates\aws_resources_template_1.5.xlsx")){
                 // NOTE: 出力ファイルが壊れる
                 //var sheet = workbook.Worksheets.Worksheet("ec2_instances");
                 //sheet.Cell("B4").Value = "{{item.ID}}";
