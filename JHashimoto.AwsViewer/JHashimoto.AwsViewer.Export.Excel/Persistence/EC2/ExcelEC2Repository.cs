@@ -15,7 +15,7 @@ namespace JHashimoto.AwsViewer.ExcelInfrastructure.Persistence.EC2 {
                 Data = ec2List
             };
 
-            using(var workbook = new XLWorkbook(@".\Templates\aws_resources_template_1.5.xlsx")){
+            using(var workbook = new XLWorkbook(@".\Templates\aws_resources_template_041002.xlsx")){
                 // NOTE: 出力ファイルが壊れる
                 //var sheet = workbook.Worksheets.Worksheet("ec2_instances");
                 //sheet.Cell("B4").Value = "{{item.ID}}";
@@ -27,8 +27,6 @@ namespace JHashimoto.AwsViewer.ExcelInfrastructure.Persistence.EC2 {
                 //Process.Start(new ProcessStartInfo(@".\Templates\aws_resources_template_1.0.xlsx") { UseShellExecute = true });
 
                 using (var template = new XLTemplate(workbook)) {
-                    //var list = new EC2InstanceList { Values = ec2List };
-                    //template.AddVariable(list);
                     template.AddVariable(obj);
                     template.Generate();
                     var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "aws_resources.xlsx");
