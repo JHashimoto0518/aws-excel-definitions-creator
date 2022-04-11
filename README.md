@@ -11,4 +11,4 @@ This tool generates Excel workbooks. And it will support other output formats to
 I am implementing other resources now.
 
 # Usage
-comming soon
+coming soon
