@@ -43,13 +43,7 @@
     <None Update="Templates\aws_resources_template_0.61.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Templates\aws_resources_template_041003.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Templates\aws_resources_template_041002.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Templates\aws_resources_template_041001.xlsx">
+    <None Update="Templates\aws_resources_template_base.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Templates\aws_resources_template_1.4.xlsx">
