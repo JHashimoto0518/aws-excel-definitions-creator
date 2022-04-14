@@ -17,6 +17,7 @@ namespace JHashimoto.AwsViewer.AwsInfrastructure.Persistence.EC2 {
         public IEnumerable<EC2Instance> GetAll() {
             yield return
                 new EC2Instance() {
+                    AutoNumber = 1,
                     ID = "i-06c3998b0ed37xxxx",
                     Name = "bastion-server",
                     InstanceType = "t2.micro",
@@ -39,6 +40,7 @@ namespace JHashimoto.AwsViewer.AwsInfrastructure.Persistence.EC2 {
 
             yield return
                 new EC2Instance() {
+                    AutoNumber = 2,
                     ID = "i-00fc57644a76fxxxx",
                     Name = "web1-server",
                     InstanceType = "t2.micro",
@@ -61,6 +63,7 @@ namespace JHashimoto.AwsViewer.AwsInfrastructure.Persistence.EC2 {
 
             yield return
                 new EC2Instance() {
+                    AutoNumber = 3,
                     ID = "i-00fc57644a76fxxxx",
                     Name = "web2-server",
                     InstanceType = "t2.micro",
