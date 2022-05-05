@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using JHashimoto.AwsViewer.CreateDefinitionsApplication.Domain.Models.EC2;
 
-namespace JHashimoto.AwsViewer.AwsInfrastructure.Persistence.EC2 {
+namespace JHashimoto.AwsViewer.InMemoryAwsInfrastructure.Persistence.EC2 {
     /// <summary>
     /// 
     /// </summary>

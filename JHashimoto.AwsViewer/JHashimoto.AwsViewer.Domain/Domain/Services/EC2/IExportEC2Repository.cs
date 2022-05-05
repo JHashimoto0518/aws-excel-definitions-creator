@@ -5,8 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JHashimoto.AwsViewer.CreateDefinitionsApplication.Domain.Services {
-    public interface IExportRepository {
+namespace JHashimoto.AwsViewer.CreateDefinitionsApplication.Domain.Services.EC2 {
+    public interface IExportEC2Repository {
         void Export(IEnumerable<EC2Instance> ec2List);
     }
 }
