@@ -30,6 +30,7 @@ namespace JHashimoto.AwsViewer.AwsInfrastructure.Persistence.EC2 {
             var response = ec2Client.DescribeInstancesAsync(request);
             var reservations = response.Result.Reservations;
 
+            var index = 1;
             foreach (var reserve in reservations) {
                 foreach (var ins in reserve.Instances) {
                     var sg = new {
@@ -39,6 +40,7 @@ namespace JHashimoto.AwsViewer.AwsInfrastructure.Persistence.EC2 {
 
                     yield return
                         new EC2Instance() {
+                            AutoNumber = index,
                             ID = ins.InstanceId,
 
                             Name = (
@@ -62,6 +64,8 @@ namespace JHashimoto.AwsViewer.AwsInfrastructure.Persistence.EC2 {
                             Platform = ins.Platform,
                             Architecture = ins.Architecture
                         };
+
+                    index++;
                 }
             }
         }

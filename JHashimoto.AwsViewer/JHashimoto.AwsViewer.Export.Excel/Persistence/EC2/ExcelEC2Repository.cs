@@ -1,11 +1,11 @@
 ﻿using ClosedXML.Excel;
 using ClosedXML.Report;
 using JHashimoto.AwsViewer.CreateDefinitionsApplication.Domain.Models.EC2;
-using JHashimoto.AwsViewer.CreateDefinitionsApplication.Domain.Services;
+using JHashimoto.AwsViewer.CreateDefinitionsApplication.Domain.Services.EC2;
 using System.Diagnostics;
 
 namespace JHashimoto.AwsViewer.ExcelInfrastructure.Persistence.EC2 {
-    public class ExcelEC2Repository : IExportRepository {
+    public class ExcelEC2Repository : IExportEC2Repository {
 
         public ExcelEC2Repository() {
         }
@@ -13,7 +13,7 @@ namespace JHashimoto.AwsViewer.ExcelInfrastructure.Persistence.EC2 {
         public void Export(IEnumerable<EC2Instance> ec2) {
 
             var obj = new {
-                Data = ec2
+                Data = ec2.OrderBy(i => i.Name)
             };
 
             var tplBase = @".\Templates\aws_resources_template_base.xlsx";

@@ -43,7 +43,19 @@
     <None Update="Templates\aws_resources_template_0.61.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Templates\aws_resources_template_base.xlsx">
+    <None Update="Templates\aws_resources_template_base_mergedlabel_ingressegress - コピー.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\aws_resources_template_base_mergedlabel2.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\aws_resources_template_base_mergedlabel.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\aws_resources_template_base_summaryabove2.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\aws_resources_template_base_summaryabove1.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Templates\aws_resources_template_1.4.xlsx">
