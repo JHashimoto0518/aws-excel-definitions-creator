@@ -31,17 +31,17 @@ public static class EntryPoint {
         //var ec2Repository = new AwsEC2Repository();
 
         // EC2
-        //var ec2Repository = new AwsEC2Repository("dev", Amazon.RegionEndpoint.APNortheast1);
+        var ec2Repository = new AwsEC2Repository("dev", Amazon.RegionEndpoint.APNortheast1);
         ////var ec2Repository = new InMemoryAwsEC2Repository(); // for test
-        //var exportRepository = new ExcelEC2Repository();
-        //var ec2Service = new EC2ApplicationService(ec2Repository, exportRepository);
-        //ec2Service.Export();
+        var ec2ExportRepository = new ExcelEC2Repository();
+        var ec2Service = new EC2ApplicationService(ec2Repository, ec2ExportRepository);
+        ec2Service.Export();
 
         // SecurityGroup
         var sgRepository = new AwsSecurityGroupRepository("dev", Amazon.RegionEndpoint.APNortheast1);
         //var sgRepository = new InMemoryAwsSecurityGroupRepository(); // for test
-        var exportRepository = new ExcelSecurityGroupRepository();
-        var sgService = new SecurityGroupApplicationService(sgRepository, exportRepository);
+        var sgExportRepository = new ExcelSecurityGroupRepository();
+        var sgService = new SecurityGroupApplicationService(sgRepository, sgExportRepository);
         sgService.Export();
     }
 }

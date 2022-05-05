@@ -20,7 +20,6 @@ namespace JHashimoto.AwsViewer.CreateDefinitionsApplication.Application.Security
             this.exportRepository = exportRepository ?? throw new ArgumentNullException(nameof(exportRepository));
         }
 
-
         public void Export() {
             this.exportRepository.Export(this.securityGroupRepository.GetAll());
         }

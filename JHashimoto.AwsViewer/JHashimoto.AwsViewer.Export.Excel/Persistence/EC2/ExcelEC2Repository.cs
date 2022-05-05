@@ -16,7 +16,8 @@ namespace JHashimoto.AwsViewer.ExcelInfrastructure.Persistence.EC2 {
                 Data = ec2.OrderBy(i => i.Name)
             };
 
-            var tplBase = @".\Templates\aws_resources_template_base.xlsx";
+            //var tplBase = @".\Templates\aws_resources_template_base.xlsx";
+            var tplBase = @".\Templates\aws_resources_template_base_mergedlabel2.xlsx";
             var tplPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), @"aws_resources_template.xlsx");
 
             // setting template

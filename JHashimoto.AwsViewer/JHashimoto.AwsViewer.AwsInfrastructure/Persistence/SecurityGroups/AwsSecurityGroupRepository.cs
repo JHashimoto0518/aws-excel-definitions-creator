@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Amazon.EC2;
-//using Amazon.EC2.Model;
 using JHashimoto.AwsViewer.CreateDefinitionsApplication.Domain.Models.SecurityGroups;
-//using MySecurityGroup = JHashimoto.AwsViewer.CreateDefinitionsApplication.Domain.Models.SecurityGroups.SecurityGroup;
 using JHashimoto.AwsViewer.AwsInfrastructure.Authentication;
 
 namespace JHashimoto.AwsViewer.AwsInfrastructure.Persistence.SecurityGroups {
