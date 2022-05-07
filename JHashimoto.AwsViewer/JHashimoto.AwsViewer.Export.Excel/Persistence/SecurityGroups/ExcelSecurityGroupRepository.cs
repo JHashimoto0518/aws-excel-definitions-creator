@@ -16,16 +16,7 @@ namespace JHashimoto.AwsViewer.ExcelInfrastructure.Persistence.SecurityGroups {
                 Data = securityGroup.OrderBy(sg => sg.VpcID).ThenBy(sg => sg.Name).ThenByDescending(sg => sg.IngressOrEgress).ThenBy(sg => sg.SourceType).ThenBy(sg => sg.Source).ThenBy(sg => sg.SourcePort).ToList()
             };
 
-            // HACK:
-            //for (int i = 0; i < obj.Data.Count(); i++) {
-            //    obj.Data.ElementAt(i).AutoNumber = i + 1;
-            //}
-
-            //var tplBase = @".\Templates\aws_resources_template_base_mergedlabel.xlsx";
-            //var tplBase = @".\Templates\aws_resources_template_base_mergedlabel_ingressegress.xlsx";
             var tplBase = @".\Templates\aws_resources_template_base_mergedlabel2.xlsx";
-            //var tplBase = @".\Templates\aws_resources_template_base_summaryabove1.xlsx";
-            //var tplBase = @".\Templates\aws_resources_template_base_summaryabove2.xlsx";
             var tplPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), $"aws_resources_template_{DateTime.Now:yyMMddHHmmss}.xlsx");
 
             // setting template
@@ -36,7 +27,6 @@ namespace JHashimoto.AwsViewer.ExcelInfrastructure.Persistence.SecurityGroups {
                     var wsh = wbk.Worksheets.Worksheet("security_group");
                     wsh.Cell("A2").Value = $"{securityGroup.Count()} items";
 
-                    //wsh.Cell("A4").Value = "{{item." + nameof(SecurityGroupRule.AutoNumber) + "}}";
                     wsh.Cell("A4").Value = "{{item." + nameof(SecurityGroupRule.VpcID) + "}}";
                     //wsh.Cell("B4").Value = "{{item." + nameof(SecurityGroupRule.Name) + "}}";
                     wsh.Cell("B4").Value = "{{item." + nameof(SecurityGroupRule.GroupName) + "}}";
@@ -51,7 +41,6 @@ namespace JHashimoto.AwsViewer.ExcelInfrastructure.Persistence.SecurityGroups {
 
                     // temporary
                     wsh.Column("C").Hide();
-
 
                     wbk.SaveAs(tplPath);
                 }
